@@ -1,0 +1,26 @@
+C:\Users\slava\Desktop\ControlTreeViewLibrary\ControlTreeView\bin\Release\ControlTreeView.dll
+C:\Users\slava\Desktop\ControlTreeViewLibrary\ControlTreeView\bin\Release\ControlTreeView.pdb
+C:\Users\slava\Desktop\ControlTreeViewLibrary\ControlTreeView\obj\Release\ResolveAssemblyReference.cache
+C:\Users\slava\Desktop\ControlTreeViewLibrary\ControlTreeView\obj\Release\ControlTreeView.CTreeView.resources
+C:\Users\slava\Desktop\ControlTreeViewLibrary\ControlTreeView\obj\Release\ControlTreeView.NodeControl.resources
+C:\Users\slava\Desktop\ControlTreeViewLibrary\ControlTreeView\obj\Release\ControlTreeView.csproj.GenerateResource.Cache
+C:\Users\slava\Desktop\ControlTreeViewLibrary\ControlTreeView\obj\Release\ControlTreeView.dll
+C:\Users\slava\Desktop\ControlTreeViewLibrary\ControlTreeView\obj\Release\ControlTreeView.pdb
+C:\Users\slava\Desktop\ControlTreeViewLibrary\ControlTreeView\bin\Release\ControlTreeView.XML
+C:\Users\slava\Desktop\Новая папка\ControlTreeViewLibrary\ControlTreeView\bin\Release\ControlTreeView.XML
+C:\Users\slava\Desktop\Новая папка\ControlTreeViewLibrary\ControlTreeView\bin\Release\ControlTreeView.dll
+C:\Users\slava\Desktop\Новая папка\ControlTreeViewLibrary\ControlTreeView\bin\Release\ControlTreeView.pdb
+C:\Users\slava\Desktop\Новая папка\ControlTreeViewLibrary\ControlTreeView\obj\Release\ResolveAssemblyReference.cache
+C:\Users\slava\Desktop\Новая папка\ControlTreeViewLibrary\ControlTreeView\obj\Release\ControlTreeView.CTreeView.resources
+C:\Users\slava\Desktop\Новая папка\ControlTreeViewLibrary\ControlTreeView\obj\Release\ControlTreeView.NodeControl.resources
+C:\Users\slava\Desktop\Новая папка\ControlTreeViewLibrary\ControlTreeView\obj\Release\ControlTreeView.csproj.GenerateResource.Cache
+C:\Users\slava\Desktop\Новая папка\ControlTreeViewLibrary\ControlTreeView\obj\Release\ControlTreeView.dll
+C:\Users\slava\Desktop\Новая папка\ControlTreeViewLibrary\ControlTreeView\obj\Release\ControlTreeView.pdb
+C:\Users\slava\Desktop\Спрятанная ControlTreeViewLibrary\ControlTreeViewLibrary\ControlTreeView\bin\Release\ControlTreeView.dll
+C:\Users\slava\Desktop\Спрятанная ControlTreeViewLibrary\ControlTreeViewLibrary\ControlTreeView\bin\Release\ControlTreeView.pdb
+C:\Users\slava\Desktop\Спрятанная ControlTreeViewLibrary\ControlTreeViewLibrary\ControlTreeView\obj\Release\ResolveAssemblyReference.cache
+C:\Users\slava\Desktop\Спрятанная ControlTreeViewLibrary\ControlTreeViewLibrary\ControlTreeView\obj\Release\ControlTreeView.CTreeView.resources
+C:\Users\slava\Desktop\Спрятанная ControlTreeViewLibrary\ControlTreeViewLibrary\ControlTreeView\obj\Release\ControlTreeView.NodeControl.resources
+C:\Users\slava\Desktop\Спрятанная ControlTreeViewLibrary\ControlTreeViewLibrary\ControlTreeView\obj\Release\ControlTreeView.csproj.GenerateResource.Cache
+C:\Users\slava\Desktop\Спрятанная ControlTreeViewLibrary\ControlTreeViewLibrary\ControlTreeView\obj\Release\ControlTreeView.dll
+C:\Users\slava\Desktop\Спрятанная ControlTreeViewLibrary\ControlTreeViewLibrary\ControlTreeView\obj\Release\ControlTreeView.pdb

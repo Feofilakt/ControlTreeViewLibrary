@@ -1,0 +1,9 @@
+C:\Users\slava\Desktop\ControlTreeView\ControlTreeView\bin\Debug\ControlTreeView.dll
+C:\Users\slava\Desktop\ControlTreeView\ControlTreeView\bin\Debug\ControlTreeView.pdb
+C:\Users\slava\Desktop\ControlTreeView\ControlTreeView\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\slava\Desktop\ControlTreeView\ControlTreeView\obj\Debug\CTreeView.CTreeView.resources
+C:\Users\slava\Desktop\ControlTreeView\ControlTreeView\obj\Debug\CTreeView.NodeControl.resources
+C:\Users\slava\Desktop\ControlTreeView\ControlTreeView\obj\Debug\CTreeViewLibrary.csproj.GenerateResource.Cache
+C:\Users\slava\Desktop\ControlTreeView\ControlTreeView\obj\Debug\ControlTreeView.dll
+C:\Users\slava\Desktop\ControlTreeView\ControlTreeView\obj\Debug\ControlTreeView.pdb
+C:\Users\slava\Desktop\ControlTreeView\ControlTreeView\bin\Debug\ControlTreeView.XML

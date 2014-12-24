@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControlTreeView", "ControlTreeView\ControlTreeView.csproj", "{CDC9BDBF-6F7C-4F08-B9D5-396F39E85DC1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "test", "test\test.csproj", "{EBF0A50C-086A-4E46-9911-91F90B736923}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CDC9BDBF-6F7C-4F08-B9D5-396F39E85DC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDC9BDBF-6F7C-4F08-B9D5-396F39E85DC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDC9BDBF-6F7C-4F08-B9D5-396F39E85DC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDC9BDBF-6F7C-4F08-B9D5-396F39E85DC1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBF0A50C-086A-4E46-9911-91F90B736923}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBF0A50C-086A-4E46-9911-91F90B736923}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBF0A50C-086A-4E46-9911-91F90B736923}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBF0A50C-086A-4E46-9911-91F90B736923}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
