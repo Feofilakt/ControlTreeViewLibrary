@@ -19,6 +19,9 @@ namespace ControlTreeView
                long lParam   // second message parameter
                );
 
+        /// <summary>
+        /// 
+        /// </summary>
         public struct DragTargetPositionClass
         {
             internal DragTargetPositionClass(CTreeNode nodeDirect, CTreeNode nodeBefore, CTreeNode nodeAfter)
@@ -64,11 +67,10 @@ namespace ControlTreeView
             }
         }
 
-        //private CTreeView cTreeView;
-        private Pen dragDropLinePen;//dispose?
+        private Pen dragDropLinePen;
         private Point dragDropLinePoint1, dragDropLinePoint2;
         private Rectangle dragDropRectangle;
-        private Timer scrollTimer;//dispose?
+        private Timer scrollTimer;
 
         private void scrollTimer_Tick(object sender, EventArgs e)
         {

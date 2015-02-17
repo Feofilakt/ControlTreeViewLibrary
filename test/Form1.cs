@@ -70,17 +70,17 @@ namespace test
             cTreeView2.EndUpdate();
             
             cTreeView3.BeginUpdate();
-            cTreeView3.Nodes.Add(new CTreeNode("root1",new Class1("root1")));
-            cTreeView3.Nodes.Add(new CTreeNode("root2",new Class3()));
-            cTreeView3.Nodes[1].Nodes.Add(new CTreeNode("child",new Class1("child")));
-            CTreeNode n1 = new CTreeNode("child 1",new Class1("child 1"));
-            n1.Nodes.Add(new CTreeNode("child 1-1",new Class1("child 1-1")));
-            n1.Nodes.Add(new CTreeNode("child 1-2",new Class2("child 1-2")));
+            cTreeView3.Nodes.Add(new CTreeNode("",new Class1("")));
+            cTreeView3.Nodes.Add(new CTreeNode("",new Class3()));
+            cTreeView3.Nodes[1].Nodes.Add(new CTreeNode("",new Class1("")));
+            CTreeNode n1 = new CTreeNode("",new Class1(""));
+            n1.Nodes.Add(new CTreeNode("",new Class1("")));
+            n1.Nodes.Add(new CTreeNode("",new Class2("")));
             cTreeView3.Nodes[0].Nodes.Add(n1);
-            cTreeView3.Nodes[0].Nodes.Add(new CTreeNode("child 2",new Class2("child 2")));
-            cTreeView3.Nodes[0].Nodes[1].Nodes.Add(new CTreeNode("child 2-1",new Class1("child 2-1")));
-            cTreeView3.Nodes[0].Nodes[1].Nodes.Add(new CTreeNode("child 2-2",new Class1("child 2-2")));
-            cTreeView3.Nodes[0].Nodes[1].Nodes.Add(new CTreeNode("child 2-3",new Class1("child 2-3")));
+            cTreeView3.Nodes[0].Nodes.Add(new CTreeNode("",new Class2("")));
+            cTreeView3.Nodes[0].Nodes[1].Nodes.Add(new CTreeNode("",new Class1("")));
+            cTreeView3.Nodes[0].Nodes[1].Nodes.Add(new CTreeNode("",new Class1("")));
+            cTreeView3.Nodes[0].Nodes[1].Nodes.Add(new CTreeNode("",new Class1("")));
             cTreeView3.EndUpdate();
 
             cTreeView1.BeginUpdate();

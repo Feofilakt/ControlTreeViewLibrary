@@ -7,7 +7,7 @@ using System.Collections.Generic;
 namespace ControlTreeView
 {
     /// <summary>
-    /// Class that inherits from UserControl and implements specific selection logic and DragAndDrop logic.
+    /// Implements specific selection logic and DragAndDrop logic.
     /// </summary>
     public class NodeControl : UserControl, INodeControl
     {
@@ -16,13 +16,10 @@ namespace ControlTreeView
             DoubleBuffered = true;
         }
 
-        //public event EventHandler UserSelect;
-        //public event EventHandler UserMultiSelect;
-        //public event EventHandler UserDrag;
         public CTreeNode OwnerNode { get; set; }
 
         /// <summary>
-        /// it's experimental property for changing control's position relativly lines
+        /// Experimental property for changing control's position relative to lines
         /// </summary>
         public virtual Rectangle Area
         {
@@ -49,7 +46,6 @@ namespace ControlTreeView
                 {
                     if (!OwnerNode.IsSelected) OwnerNode.IsSelected = true;
                     else unselectAfterMouseUp = true;
-                    //UserMultiSelect(this, new EventArgs());
                 }
                 else
                 {
@@ -59,12 +55,10 @@ namespace ControlTreeView
                         OwnerNode.IsSelected = true;
                     }
                     else unselectOtherAfterMouseUp = true;
-                    //UserSelect(this, new EventArgs());
                 }
             }
-            //Set handlers that handles start or not start dragging
-            //mouseDownPosition = e.Location;
-            mouseDownPosition = this.OwnerNode.OwnerCTreeView.PointToClient(Cursor.Position);
+            //Set handlers that handle start or not start dragging
+            mouseDownPosition = this.OwnerNode.OwnerCTreeView.PointToClient(Cursor.Position);//mouseDownPosition = e.Location;
             this.MouseUp += new MouseEventHandler(NotDragging);
             this.MouseMove += new MouseEventHandler(StartDragging);
 
@@ -82,7 +76,6 @@ namespace ControlTreeView
                 this.MouseMove -= StartDragging;
 
                 OwnerNode.Drag();
-                //UserDrag(this, new EventArgs());
             }
         }
 
@@ -94,14 +87,12 @@ namespace ControlTreeView
             if (unselectAfterMouseUp)
             {
                 OwnerNode.IsSelected = false;
-                //UserMultiSelect(this, new EventArgs());
             }
             if (unselectOtherAfterMouseUp)
             {
                 List<CTreeNode> nodesToUnselect = new List<CTreeNode>(OwnerNode.OwnerCTreeView.SelectedNodes);
                 nodesToUnselect.Remove(OwnerNode);
                 foreach (CTreeNode node in nodesToUnselect) node.IsSelected = false;
-                //UserMultiSelect(this, new EventArgs());
             }
         }
 

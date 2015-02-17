@@ -43,7 +43,7 @@
         </member>
         <member name="P:ControlTreeView.INodeContainer.OwnerCTreeView">
             <summary>
-            Gets the tree view that the CTreeNodeCollection of this INodeContainer is assigned to.
+            Gets the TreeView that the CTreeNodeCollection of this INodeContainer is assigned to.
             </summary>
         </member>
         <member name="P:ControlTreeView.INodeContainer.BoundsSubtree">
@@ -59,58 +59,6 @@
         <member name="F:ControlTreeView.CTreeView.rootLines">
             <summary>
             The list of lines for the CTreeView.
-            </summary>
-        </member>
-        <member name="M:ControlTreeView.CTreeView.#ctor">
-            <summary>
-            Initializes a new instance of the CTreeView class.
-            </summary>
-        </member>
-        <member name="M:ControlTreeView.CTreeView.CollapseAll">
-            <summary>
-            Collapses all the tree nodes.
-            </summary>
-        </member>
-        <member name="M:ControlTreeView.CTreeView.ExpandAll">
-            <summary>
-            Expands all the tree nodes.
-            </summary>
-        </member>
-        <member name="M:ControlTreeView.CTreeView.GetNodeCount(System.Boolean)">
-            <summary>
-            Retrieves the number of tree nodes, optionally including those in all subtrees, assigned to the tree view control.
-            </summary>
-            <param name="includeSubTrees">true  to count the TreeNode items that the subtrees contain; otherwise, false.</param>
-            <returns>The number of tree nodes, optionally including those in all subtrees, assigned to the tree view control.</returns>
-        </member>
-        <member name="M:ControlTreeView.CTreeView.GetNodeAt(System.Drawing.Point)">
-            <summary>
-            Retrieves the tree node that is at the specified point.
-            </summary>
-            <param name="pt">The Point to evaluate and retrieve the node from.</param>
-            <returns>The CTreeNode at the specified point, in client coordinates, or null if there is no node at that location.</returns>
-        </member>
-        <member name="M:ControlTreeView.CTreeView.GetNodeAt(System.Int32,System.Int32)">
-            <summary>
-            Retrieves the tree node at the point with the specified coordinates.
-            </summary>
-            <param name="x">The X position to evaluate and retrieve the node from.</param>
-            <param name="y">The Y position to evaluate and retrieve the node from.</param>
-            <returns>The CTreeNode at the specified location, in tree view (client) coordinates, or null if there is no node at that location.</returns>
-        </member>
-        <member name="M:ControlTreeView.CTreeView.ClearSelection">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="M:ControlTreeView.CTreeView.BeginUpdate">
-            <summary>
-            Disables recalculating of the CTreeView.
-            </summary>
-        </member>
-        <member name="M:ControlTreeView.CTreeView.EndUpdate">
-            <summary>
-            Enables the recalculating of the CTreeView.
             </summary>
         </member>
         <member name="M:ControlTreeView.CTreeView.SetScrollDirections(System.Boolean,System.Boolean,System.Boolean,System.Boolean)">
@@ -137,19 +85,19 @@
         </member>
         <member name="M:ControlTreeView.CTreeView.OnCollapseNode(ControlTreeView.CTreeViewEventArgs)">
             <summary>
-            Raises the Collapse event.
+            Raises the CollapseNode event.
             </summary>
             <param name="e">A CTreeViewEventArgs that contains the event data.</param>
         </member>
         <member name="M:ControlTreeView.CTreeView.OnExpandNode(ControlTreeView.CTreeViewEventArgs)">
             <summary>
-            Raises the Expand event.
+            Raises the ExpandNode event.
             </summary>
             <param name="e">A CTreeViewEventArgs that contains the event data</param>
         </member>
         <member name="M:ControlTreeView.CTreeView.OnSelectNode(ControlTreeView.CTreeViewEventArgs)">
             <summary>
-            Raises the Select event.
+            Raises the SelectNode event.
             </summary>
             <param name="e">A CTreeViewEventArgs that contains the event data</param>
         </member>
@@ -189,10 +137,68 @@
             </summary>
             <param name="e">A PaintEventArgs that contains the event data.</param>
         </member>
+        <member name="M:ControlTreeView.CTreeView.#ctor">
+            <summary>
+            Initializes a new instance of the CTreeView class.
+            </summary>
+        </member>
+        <member name="M:ControlTreeView.CTreeView.CollapseAll">
+            <summary>
+            Collapses all the tree nodes.
+            </summary>
+        </member>
+        <member name="M:ControlTreeView.CTreeView.ExpandAll">
+            <summary>
+            Expands all the tree nodes.
+            </summary>
+        </member>
+        <member name="M:ControlTreeView.CTreeView.GetNodeCount(System.Boolean)">
+            <summary>
+            Retrieves the number of tree nodes, optionally including those in all subtrees, assigned to the CTreeView control.
+            </summary>
+            <param name="includeSubTrees">true  to count the CTreeNode items that the subtrees contain; otherwise, false.</param>
+            <returns>The number of tree nodes, optionally including those in all subtrees, assigned to the CTreeView control.</returns>
+        </member>
+        <member name="M:ControlTreeView.CTreeView.GetNodeAt(System.Drawing.Point)">
+            <summary>
+            Retrieves the tree node that is at the specified point.
+            </summary>
+            <param name="pt">The Point to evaluate and retrieve the node from.</param>
+            <returns>The CTreeNode at the specified point, in client coordinates, or null if there is no node at that location.</returns>
+        </member>
+        <member name="M:ControlTreeView.CTreeView.GetNodeAt(System.Int32,System.Int32)">
+            <summary>
+            Retrieves the tree node at the point with the specified coordinates.
+            </summary>
+            <param name="x">The X position to evaluate and retrieve the node from.</param>
+            <param name="y">The Y position to evaluate and retrieve the node from.</param>
+            <returns>The CTreeNode at the specified location, in CTreeView (client) coordinates, or null if there is no node at that location.</returns>
+        </member>
+        <member name="M:ControlTreeView.CTreeView.ClearSelection">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:ControlTreeView.CTreeView.BeginUpdate">
+            <summary>
+            Disables recalculating of the CTreeView.
+            </summary>
+        </member>
+        <member name="M:ControlTreeView.CTreeView.EndUpdate">
+            <summary>
+            Enables the recalculating of the CTreeView.
+            </summary>
+        </member>
         <member name="P:ControlTreeView.CTreeView.SuspendUpdate">
             <summary>
             
             </summary>
+        </member>
+        <member name="P:ControlTreeView.CTreeView.DefaultSize">
+            <summary>
+            Gets the default size of the control.
+            </summary>
+            <value>The default Size of the control.</value>
         </member>
         <member name="P:ControlTreeView.CTreeView.Nodes">
             <summary>
@@ -240,15 +246,15 @@
         </member>
         <member name="P:ControlTreeView.CTreeView.ShowLines">
             <summary>
-            Gets or sets a value indicating whether lines are drawn between tree nodes in the tree view control.
+            Gets or sets a value indicating whether lines are drawn between tree nodes.
             </summary>
-            <value>true  if lines are drawn between tree nodes in the tree view control; otherwise, false. The default is true.</value>
+            <value>true  if lines are drawn between tree nodes; otherwise, false. The default is true.</value>
         </member>
         <member name="P:ControlTreeView.CTreeView.ShowRootLines">
             <summary>
-            Gets or sets a value indicating whether lines are drawn between the tree nodes that are at the root of the tree view.
+            Gets or sets a value indicating whether lines are drawn for the root nodes of the CTreeView.
             </summary>
-            <value>true  if lines are drawn between the tree nodes that are at the root of the tree view; otherwise, false. The default is true.</value>
+            <value>true  if lines are drawn for the root nodes of the CTreeView; otherwise, false. The default is true.</value>
         </member>
         <member name="P:ControlTreeView.CTreeView.MinimizeCollapsed">
             <summary>
@@ -300,11 +306,10 @@
             Occurs when the tree node is selected.
             </summary>
         </member>
-        <member name="P:ControlTreeView.CTreeView.DefaultSize">
+        <member name="T:ControlTreeView.CTreeView.DragTargetPositionClass">
             <summary>
-            Gets the default size of the control.
+            
             </summary>
-            <value>The default Size of the control.</value>
         </member>
         <member name="P:ControlTreeView.CTreeView.DragTargetPositionClass.Enabled">
             <summary>
@@ -326,45 +331,20 @@
             The lower node of drag target position.
             </summary>
         </member>
-        <member name="M:ControlTreeView.CTreeViewEventArgs.#ctor(ControlTreeView.CTreeNode)">
+        <member name="M:ControlTreeView.DragNodesEventArgs.#ctor(System.Collections.Generic.List{ControlTreeView.CTreeNode})">
             <summary>
-            Initializes a new instance of the CTreeViewEventArgs class for the specified tree node.
+            Initializes a new instance of the DragNodeEventArgs class.
             </summary>
-            <param name="node">The CTreeNode that the event is responding to.</param>
+            <param name="nodes">The tree nodes that the event is responding to.</param>
         </member>
-        <member name="P:ControlTreeView.CTreeViewEventArgs.Node">
+        <member name="P:ControlTreeView.DragNodesEventArgs.Nodes">
             <summary>
-            Gets the tree node that has been expanded, collapsed, or selected.
-            </summary>
-        </member>
-        <member name="T:ControlTreeView.INodeControl">
-            <summary>
-            Provides selection logic and DragAndDrop logic for the CTreeNode.Control.
+            Gets the tree nodes that have been dragged.
             </summary>
         </member>
-        <member name="P:ControlTreeView.INodeControl.OwnerNode">
+        <member name="T:ControlTreeView.CTreeNode">
             <summary>
-            
-            </summary>
-        </member>
-        <member name="T:ControlTreeView.CTreeViewDrawStyle">
-            <summary>
-            The draw style of CTreeView.
-            </summary>
-        </member>
-        <member name="T:ControlTreeView.CTreeViewSelectionMode">
-            <summary>
-            The selection mode of CTreeView.
-            </summary>
-        </member>
-        <member name="T:ControlTreeView.CTreeViewDragAndDropMode">
-            <summary>
-            The DragAndDrop mode of CTreeView.
-            </summary>
-        </member>
-        <member name="T:ControlTreeView.CTreeViewPlusMinus">
-            <summary>
-            The bitmaps for plus and minus buttons of nodes.
+            Represents a node of a CTreeView.
             </summary>
         </member>
         <member name="M:ControlTreeView.CTreeNode.NextLocation(System.Drawing.Point)">
@@ -394,7 +374,7 @@
             <summary>
             Calculates coordinats for PlusMinus button of this node and all child nodes.
             </summary>
-            <param name="locationPlusMinusCalc"></param>
+            <param name="plusMinusCalc"></param>
             <param name="needRootPlusMinus"></param>
         </member>
         <member name="M:ControlTreeView.CTreeNode.CalculateLines(System.Func{ControlTreeView.CTreeNode,ControlTreeView.CTreeNode.Line},System.Func{ControlTreeView.CTreeNodeCollection,ControlTreeView.CTreeNode.Line},System.Func{ControlTreeView.CTreeNode,ControlTreeView.CTreeNode.Line})">
@@ -419,7 +399,7 @@
             <summary>
             Initializes a new instance of the CTreeNode class with the specified CTreeNodeControl.
             </summary>
-            <param name="control">Сontrol, which will be assigned to this node.</param>
+            <param name="control">Сontrol that will be assigned to this node.</param>
         </member>
         <member name="M:ControlTreeView.CTreeNode.#ctor(System.String,System.Windows.Forms.Control)">
             <summary>
@@ -556,7 +536,7 @@
         </member>
         <member name="P:ControlTreeView.CTreeNode.Level">
             <summary>
-            Gets the zero-based depth of the tree node in the CTreeView control.
+            Gets the zero-based depth of the tree node in the CTreeView.
             </summary>
         </member>
         <member name="P:ControlTreeView.CTreeNode.FullPath">
@@ -592,31 +572,9 @@
             </summary>
             <value>The Rectangle that represents the bounds of the node's subtree.</value>
         </member>
-        <member name="M:ControlTreeView.DragNodesEventArgs.#ctor(System.Collections.Generic.List{ControlTreeView.CTreeNode})">
+        <member name="T:ControlTreeView.CTreeNodeCollection">
             <summary>
-            Initializes a new instance of the DragNodeEventArgs class.
-            </summary>
-            <param name="nodes">The tree nodes that the event is responding to.</param>
-        </member>
-        <member name="P:ControlTreeView.DragNodesEventArgs.Nodes">
-            <summary>
-            Gets the tree nodes that have been dragged.
-            </summary>
-        </member>
-        <member name="T:ControlTreeView.NodeControl">
-            <summary>
-            Class that inherits from UserControl and implements specific selection logic and DragAndDrop logic.
-            </summary>
-        </member>
-        <member name="M:ControlTreeView.NodeControl.OnMouseDown(System.Windows.Forms.MouseEventArgs)">
-            <summary>
-            Raises the MouseDown event.
-            </summary>
-            <param name="e">A MouseEventArgs that contains the event data.</param>
-        </member>
-        <member name="P:ControlTreeView.NodeControl.Area">
-            <summary>
-            it's experimental property for changing control's position relativly lines
+            Represents a collection of CTreeNode objects.
             </summary>
         </member>
         <member name="M:ControlTreeView.CTreeNodeCollection.TraverseNodes(System.Action{ControlTreeView.CTreeNode})">
@@ -638,8 +596,13 @@
             </summary>
             <param name="nodes">An array of CTreeNode objects representing the tree nodes to add to the collection.</param>
             <exception cref="T:System.ArgumentNullException">Nodes is null.</exception>
-            <exception cref="!:">The nodes is currently assigned to another CTreeNode.</exception>
-            <exception cref="!:">The nodes is currently assigned to another CTreeView.</exception>
+        </member>
+        <member name="M:ControlTreeView.CTreeNodeCollection.InsertRange(System.Int32,ControlTreeView.CTreeNode[])">
+            <summary>
+            Inserts an array of previously created tree nodes to the collection at the specific position.
+            </summary>
+            <param name="index">The zero-based index at which nodes should be inserted.</param>
+            <param name="nodes">An array of CTreeNode objects representing the tree nodes to add to the collection.</param>
         </member>
         <member name="M:ControlTreeView.CTreeNodeCollection.Find(System.String,System.Boolean)">
             <summary>
@@ -718,6 +681,63 @@
         <member name="P:ControlTreeView.CTreeNodeCollection.ParentCTreeView">
             <summary>
             Gets the parent CTreeView that this collection is assigned to.
+            </summary>
+        </member>
+        <member name="M:ControlTreeView.CTreeViewEventArgs.#ctor(ControlTreeView.CTreeNode)">
+            <summary>
+            Initializes a new instance of the CTreeViewEventArgs class for the specified tree node.
+            </summary>
+            <param name="node">The CTreeNode that the event is responding to.</param>
+        </member>
+        <member name="P:ControlTreeView.CTreeViewEventArgs.Node">
+            <summary>
+            Gets the tree node that has been expanded, collapsed, or selected.
+            </summary>
+        </member>
+        <member name="T:ControlTreeView.CTreeViewDrawStyle">
+            <summary>
+            The draw style of CTreeView.
+            </summary>
+        </member>
+        <member name="T:ControlTreeView.CTreeViewSelectionMode">
+            <summary>
+            The selection mode of CTreeView.
+            </summary>
+        </member>
+        <member name="T:ControlTreeView.CTreeViewDragAndDropMode">
+            <summary>
+            The DragAndDrop mode of CTreeView.
+            </summary>
+        </member>
+        <member name="T:ControlTreeView.CTreeViewPlusMinus">
+            <summary>
+            The bitmaps for plus and minus buttons of nodes.
+            </summary>
+        </member>
+        <member name="T:ControlTreeView.NodeControl">
+            <summary>
+            Implements specific selection logic and DragAndDrop logic.
+            </summary>
+        </member>
+        <member name="T:ControlTreeView.INodeControl">
+            <summary>
+            Provides selection logic and DragAndDrop logic for the CTreeNode.Control.
+            </summary>
+        </member>
+        <member name="P:ControlTreeView.INodeControl.OwnerNode">
+            <summary>
+            The owner node of this control.
+            </summary>
+        </member>
+        <member name="M:ControlTreeView.NodeControl.OnMouseDown(System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Raises the MouseDown event.
+            </summary>
+            <param name="e">A MouseEventArgs that contains the event data.</param>
+        </member>
+        <member name="P:ControlTreeView.NodeControl.Area">
+            <summary>
+            Experimental property for changing control's position relative to lines
             </summary>
         </member>
     </members>

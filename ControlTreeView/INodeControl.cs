@@ -11,21 +11,8 @@ namespace ControlTreeView
     /// </summary>
     public interface INodeControl
     {
-        ///// <summary>
-        ///// Event that will be signed by CTreeNode to indicate whenever user attempts to select node.
-        ///// </summary>
-        //event EventHandler UserSelect;
-        ///// <summary>
-        ///// Event that will be signed by CTreeNode to indicate whenever user attempts to select node with some multi modificator.
-        ///// </summary>
-        //event EventHandler UserMultiSelect;
-        ///// <summary>
-        ///// Event that will be signed by CTreeNode to indicate whenever user attempts to drag nodes.
-        ///// </summary>
-        //event EventHandler UserDrag;
-
         /// <summary>
-        /// 
+        /// The owner node of this control.
         /// </summary>
         CTreeNode OwnerNode { set; }
     }

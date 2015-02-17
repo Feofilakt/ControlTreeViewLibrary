@@ -3,8 +3,6 @@ using System.Collections.ObjectModel;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Collections.Generic;
-//using System.Linq;
-//using System.Text;
 
 namespace ControlTreeView
 {
@@ -67,7 +65,7 @@ namespace ControlTreeView
                     ParentCTreeView.SuspendLayout();
                     item.TraverseNodes(node => { ParentCTreeView.Controls.Add(node.Control); });
                     ParentCTreeView.ResumeLayout(false);
-                    ParentCTreeView.Recalculate();//?
+                    ParentCTreeView.Recalculate();
                 }
             }
         }
@@ -95,7 +93,7 @@ namespace ControlTreeView
             base.RemoveItem(index);
             if (ParentCTreeView != null)
             {
-                ParentCTreeView.Recalculate();//?
+                ParentCTreeView.Recalculate();
             }
         }
 

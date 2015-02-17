@@ -7,7 +7,6 @@ C:\Users\slava\Desktop\ControlTreeView\ControlTreeView\obj\Debug\ControlTreeView
 C:\Users\slava\Desktop\ControlTreeView\ControlTreeView\obj\Debug\ControlTreeView.csproj.GenerateResource.Cache
 C:\Users\slava\Desktop\ControlTreeView\ControlTreeView\obj\Debug\ControlTreeView.dll
 C:\Users\slava\Desktop\ControlTreeView\ControlTreeView\obj\Debug\ControlTreeView.pdb
-C:\Users\slava\Desktop\ControlTreeViewLibrary\ControlTreeView\bin\Debug\ControlTreeView.XML
 C:\Users\slava\Desktop\ControlTreeViewLibrary\ControlTreeView\bin\Debug\ControlTreeView.dll
 C:\Users\slava\Desktop\ControlTreeViewLibrary\ControlTreeView\bin\Debug\ControlTreeView.pdb
 C:\Users\slava\Desktop\ControlTreeViewLibrary\ControlTreeView\obj\Debug\ResolveAssemblyReference.cache

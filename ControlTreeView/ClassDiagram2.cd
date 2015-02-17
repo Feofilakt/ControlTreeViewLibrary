@@ -1,125 +1,178 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="CTreeView.NodeControl">
-    <Position X="0.5" Y="2.25" Width="1.5" />
+  <Class Name="ControlTreeView.CTreeView">
+    <Position X="0.5" Y="0.5" Width="2.25" />
+    <Members>
+      <Method Name="BeginUpdate" Hidden="true" />
+      <Property Name="BoundsSubtree" Hidden="true" />
+      <Method Name="CheckValidDrop" Hidden="true" />
+      <Method Name="ClearSelection" Hidden="true" />
+      <Method Name="CollapseAll" Hidden="true" />
+      <Method Name="CTreeView" Hidden="true" />
+      <Property Name="DefaultSize" Hidden="true" />
+      <Property Name="DragAndDropMode" Hidden="true" />
+      <Property Name="DragTargetPosition" Hidden="true" />
+      <Property Name="DrawStyle" Hidden="true" />
+      <Method Name="EndUpdate" Hidden="true" />
+      <Method Name="ExpandAll" Hidden="true" />
+      <Property Name="FirstNode" Hidden="true" />
+      <Method Name="GetNodeAt" Hidden="true" />
+      <Method Name="GetNodeCount" Hidden="true" />
+      <Property Name="IndentDepth" Hidden="true" />
+      <Property Name="IndentWidth" Hidden="true" />
+      <Property Name="LastNode" Hidden="true" />
+      <Property Name="LinesPen" Hidden="true" />
+      <Property Name="MinimizeCollapsed" Hidden="true" />
+      <Property Name="Nodes" Hidden="true" />
+      <Method Name="OnCollapseNode" Hidden="true" />
+      <Method Name="OnDragDrop" Hidden="true" />
+      <Method Name="OnDragEnter" Hidden="true" />
+      <Method Name="OnDragLeave" Hidden="true" />
+      <Method Name="OnDragOver" Hidden="true" />
+      <Method Name="OnExpandNode" Hidden="true" />
+      <Method Name="OnMouseDown" Hidden="true" />
+      <Method Name="OnPaint" Hidden="true" />
+      <Method Name="OnSelectNode" Hidden="true" />
+      <Property Name="OwnerCTreeView" Hidden="true" />
+      <Property Name="PathSeparator" Hidden="true" />
+      <Property Name="PlusMinus" Hidden="true" />
+      <Method Name="Recalculate" Hidden="true" />
+      <Method Name="ResetDragTargetPosition" Hidden="true" />
+      <Method Name="scrollTimer_Tick" Hidden="true" />
+      <Property Name="SelectedNodes" Hidden="true" />
+      <Property Name="SelectionMode" Hidden="true" />
+      <Method Name="SendMessage" Hidden="true" />
+      <Method Name="SetDragTargetPosition" Hidden="true" />
+      <Method Name="SetScrollDirections" Hidden="true" />
+      <Property Name="ShowLines" Hidden="true" />
+      <Property Name="ShowPlusMinus" Hidden="true" />
+      <Property Name="ShowRootLines" Hidden="true" />
+      <Property Name="SuspendUpdate" Hidden="true" />
+      <Method Name="updateDragTargetPosition" Hidden="true" />
+    </Members>
     <Compartments>
-      <Compartment Name="Fields" Collapsed="true" />
-    </Compartments>
-    <TypeIdentifier>
-      <HashCode>AAACAAQAEAAAAAAIAAAAAAAAACAAAAAAIAAAAEACAAA=</HashCode>
-      <FileName>NodeControl.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" />
-  </Class>
-  <Class Name="CTreeView.DragDestination">
-    <Position X="2.25" Y="0.5" Width="2" />
-    <Compartments>
-      <Compartment Name="Fields" Collapsed="true" />
-    </Compartments>
-    <TypeIdentifier>
-      <HashCode>CAAAAAAAFAAABICAACAAAAACAAgAECEAAAACAAEEAAE=</HashCode>
-      <FileName>DragDestination.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="CTreeView.CTreeView">
-    <Position X="0.5" Y="5.5" Width="1.5" />
-    <Compartments>
-      <Compartment Name="Fields" Collapsed="true" />
-      <Compartment Name="Properties" Collapsed="true" />
-      <Compartment Name="Methods" Collapsed="true" />
-    </Compartments>
-    <TypeIdentifier>
-      <HashCode>EIqwSQIAoCBKAAARgMAMBQIGAgIJiWFKOoAEJAEAEsA=</HashCode>
-      <FileName>CTreeView\CTreeView.Internal.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" />
-  </Class>
-  <Class Name="CTreeView.DragNodesEventArgs">
-    <Position X="2.25" Y="6.5" Width="1.75" />
-    <Compartments>
-      <Compartment Name="Methods" Collapsed="true" />
-    </Compartments>
-    <TypeIdentifier>
-      <HashCode>AAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>DragNodeEventArgs.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="CTreeView.CTreeViewEventArgs">
-    <Position X="2.25" Y="4.75" Width="1.75" />
-    <Compartments>
-      <Compartment Name="Methods" Collapsed="true" />
-    </Compartments>
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
-      <FileName>CTreeViewEventArgs.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="CTreeView.CTreeNode">
-    <Position X="4.5" Y="0.5" Width="2" />
-    <Compartments>
-      <Compartment Name="Fields" Collapsed="true" />
       <Compartment Name="Properties" Collapsed="true" />
       <Compartment Name="Methods" Collapsed="true" />
       <Compartment Name="Nested Types" Collapsed="false" />
     </Compartments>
     <NestedTypes>
-      <Struct Name="CTreeView.CTreeNode.Line">
-        <Compartments>
-          <Compartment Name="Methods" Collapsed="true" />
-        </Compartments>
+      <Struct Name="ControlTreeView.CTreeView.DragTargetPositionClass">
         <TypeIdentifier>
-          <NewMemberFileName>CTreeNode.cs</NewMemberFileName>
+          <NewMemberFileName>CTreeView\CTreeView.DragDrop.cs</NewMemberFileName>
         </TypeIdentifier>
       </Struct>
-      <Class Name="CTreeView.CTreeNode.NodePlusMinus">
-        <Compartments>
-          <Compartment Name="Fields" Collapsed="true" />
-        </Compartments>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>WJqwSQIAtCBKAAARgGAOBQIGAhqJmUFKOJACBAEAEtE=</HashCode>
+      <FileName>CTreeView\CTreeView.DragDrop.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ControlTreeView.NodeControl">
+    <Position X="5.25" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAACAAQAAAAAAAAAAAAAAAACACAAIAAAIAAQAQACAAA=</HashCode>
+      <FileName>NodeControl.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ControlTreeView.CTreeNode">
+    <Position X="3" Y="0.5" Width="2" />
+    <Members>
+      <Method Name="BeginUpdateCTreeView" Hidden="true" />
+      <Property Name="Bounds" Hidden="true" />
+      <Property Name="BoundsSubtree" Hidden="true" />
+      <Method Name="CalculateBounds" Hidden="true" />
+      <Method Name="CalculateLines" Hidden="true" />
+      <Method Name="CalculatePlusMinus" Hidden="true" />
+      <Method Name="Collapse" Hidden="true" />
+      <Method Name="CollapseAll" Hidden="true" />
+      <Property Name="Control" Hidden="true" />
+      <Method Name="CTreeNode" Hidden="true" />
+      <Method Name="Drag" Hidden="true" />
+      <Method Name="EndUpdateCTreeView" Hidden="true" />
+      <Method Name="Expand" Hidden="true" />
+      <Method Name="ExpandAll" Hidden="true" />
+      <Property Name="FirstNode" Hidden="true" />
+      <Property Name="FullPath" Hidden="true" />
+      <Method Name="GetNodeCount" Hidden="true" />
+      <Property Name="Index" Hidden="true" />
+      <Property Name="IsExpanded" Hidden="true" />
+      <Property Name="IsSelected" Hidden="true" />
+      <Property Name="LastNode" Hidden="true" />
+      <Property Name="Level" Hidden="true" />
+      <Property Name="Lines" Hidden="true" />
+      <Property Name="Location" Hidden="true" />
+      <Property Name="Name" Hidden="true" />
+      <Method Name="NextLocation" Hidden="true" />
+      <Property Name="NextNode" Hidden="true" />
+      <Method Name="NextXMax" Hidden="true" />
+      <Method Name="NextYMax" Hidden="true" />
+      <Property Name="Nodes" Hidden="true" />
+      <Property Name="OwnerCTreeView" Hidden="true" />
+      <Property Name="Parent" Hidden="true" />
+      <Property Name="ParentNode" Hidden="true" />
+      <Property Name="PlusMinus" Hidden="true" />
+      <Property Name="PrevNode" Hidden="true" />
+      <Property Name="Size" Hidden="true" />
+      <Property Name="Tag" Hidden="true" />
+      <Method Name="Toggle" Hidden="true" />
+      <Method Name="TraverseNodes" Hidden="true" />
+      <Property Name="Visible" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Struct Name="ControlTreeView.CTreeNode.Line">
         <TypeIdentifier>
-          <NewMemberFileName>CTreeNode.cs</NewMemberFileName>
+          <NewMemberFileName>CTreeNode\CTreeNode.Internal.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Struct>
+      <Class Name="ControlTreeView.CTreeNode.NodePlusMinus">
+        <TypeIdentifier>
+          <NewMemberFileName>CTreeNode\CTreeNode.Internal.cs</NewMemberFileName>
         </TypeIdentifier>
       </Class>
     </NestedTypes>
     <TypeIdentifier>
-      <HashCode>HQBgiQQlAABrEAAAgAIEQASAAAAICTALBhEAAABgAgA=</HashCode>
+      <HashCode>XQBgiQQFAAJrkAAAgAIEQASAAAAICRALBiEAAARwAgA=</HashCode>
       <FileName>CTreeNode\CTreeNode.Internal.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Struct Name="CTreeView.CTreeViewPlusMinus">
-    <Position X="4.5" Y="6.25" Width="1.75" />
-    <Compartments>
-      <Compartment Name="Fields" Collapsed="true" />
-      <Compartment Name="Methods" Collapsed="true" />
-    </Compartments>
+  <Interface Name="ControlTreeView.INodeControl">
+    <Position X="5.25" Y="9.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>ACAAAAAAAAAggAAAAAAAAAIBAAAAAAAAACAAAAAAAAA=</HashCode>
-      <FileName>Other Declarations.cs</FileName>
-    </TypeIdentifier>
-  </Struct>
-  <Interface Name="CTreeView.INodeControl">
-    <Position X="0.5" Y="0.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAEAAAAAAIAAAAAAAAAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
       <FileName>INodeControl.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Enum Name="CTreeView.CTreeViewDrawStyle">
-    <Position X="0.5" Y="8.5" Width="1.75" />
+  <Interface Name="ControlTreeView.INodeContainer">
+    <Position X="3.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>UAAgCAAAAABCAAAAAAAAAAQAAAAACQAAAAAAAAAAAAA=</HashCode>
+      <FileName>INodeContainer.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="ControlTreeView.CTreeViewDrawStyle">
+    <Position X="5.75" Y="7.5" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAEAAAAAAAAAAAAAAAAAAQAAAAAAAAAEAAA=</HashCode>
       <FileName>Other Declarations.cs</FileName>
     </TypeIdentifier>
   </Enum>
-  <Enum Name="CTreeView.CTreeViewSelectionMode">
-    <Position X="2.5" Y="8.5" Width="2" />
+  <Enum Name="ControlTreeView.CTreeViewSelectionMode">
+    <Position X="5.5" Y="5.75" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAACAAAIAgAAAAAAAAAEAAAA=</HashCode>
       <FileName>Other Declarations.cs</FileName>
     </TypeIdentifier>
   </Enum>
-  <Enum Name="CTreeView.CTreeViewDragAndDropMode">
-    <Position X="4.75" Y="8.5" Width="2.25" />
+  <Enum Name="ControlTreeView.CTreeViewDragAndDropMode">
+    <Position X="5.25" Y="4.25" Width="2.25" />
     <TypeIdentifier>
       <HashCode>ACAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAIAAA=</HashCode>
       <FileName>Other Declarations.cs</FileName>

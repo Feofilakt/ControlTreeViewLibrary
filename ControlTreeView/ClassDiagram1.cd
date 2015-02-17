@@ -1,7 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="ControlTreeView.CTreeNode" BaseTypeListCollapsed="true">
-    <Position X="2.75" Y="0.5" Width="2.25" />
+    <Position X="3" Y="0.5" Width="2.25" />
+    <Members>
+      <Field Name="_boundsSubtree" Hidden="true" />
+      <Field Name="_Control" Hidden="true" />
+      <Field Name="_Level" Hidden="true" />
+      <Field Name="_location" Hidden="true" />
+      <Field Name="_OwnerCTreeView" Hidden="true" />
+      <Field Name="_Visible" Hidden="true" />
+    </Members>
     <Compartments>
       <Compartment Name="Fields" Collapsed="true" />
     </Compartments>
@@ -18,20 +26,50 @@
       </Class>
     </NestedTypes>
     <TypeIdentifier>
-      <HashCode>XQBgiQQlAAJrEAAAgAIEQASAAAAICRALBgEAAARwAgA=</HashCode>
+      <HashCode>XQBgiQQFAAJrkAAAgAIEQASAAAAICRALBiEAAARwAgA=</HashCode>
       <FileName>CTreeNode\CTreeNode.Internal.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="ControlTreeView.CTreeNodeCollection" BaseTypeListCollapsed="true">
-    <Position X="5.25" Y="3.75" Width="2.25" />
+    <Position X="5.5" Y="0.5" Width="2" />
     <TypeIdentifier>
-      <HashCode>AABAAABAAAAEhAAAiAAAAAAgQAAIICAEBAAEAAAEAAA=</HashCode>
+      <HashCode>ACBAAABAAAAEhAAAiAAAAAAgQAAIICAEBAAEAAAEAAA=</HashCode>
       <FileName>CTreeNodeCollection\CTreeNodeCollection.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ControlTreeView.CTreeView" BaseTypeListCollapsed="true">
-    <Position X="0.5" Y="0.5" Width="2" />
+    <Position X="0.5" Y="0.5" Width="2.25" />
+    <Members>
+      <Field Name="_DragAndDropMode" Hidden="true" />
+      <Field Name="_DrawStyle" Hidden="true" />
+      <Field Name="_indentDepth" Hidden="true" />
+      <Field Name="_indentWidth" Hidden="true" />
+      <Field Name="_LinesPen" Hidden="true" />
+      <Field Name="_MinimizeCollapsed" Hidden="true" />
+      <Field Name="_PlusMinus" Hidden="true" />
+      <Field Name="_selectedNodes" Hidden="true" />
+      <Field Name="_SelectionMode" Hidden="true" />
+      <Field Name="_ShowLines" Hidden="true" />
+      <Field Name="_ShowPlusMinus" Hidden="true" />
+      <Field Name="_ShowRootLines" Hidden="true" />
+      <Event Name="CollapseNode" Hidden="true" />
+      <Field Name="dragDropLinePen" Hidden="true" />
+      <Field Name="dragDropLinePoint1" Hidden="true" />
+      <Field Name="dragDropLinePoint2" Hidden="true" />
+      <Field Name="dragDropRectangle" Hidden="true" />
+      <Event Name="ExpandNode" Hidden="true" />
+      <Field Name="rootLines" Hidden="true" />
+      <Field Name="scrollDown" Hidden="true" />
+      <Field Name="scrollLeft" Hidden="true" />
+      <Field Name="scrollRigh" Hidden="true" />
+      <Field Name="scrollTimer" Hidden="true" />
+      <Field Name="scrollUp" Hidden="true" />
+      <Field Name="selectionBrush" Hidden="true" />
+      <Field Name="selectionPen" Hidden="true" />
+      <Event Name="SelectNode" Hidden="true" />
+      <Field Name="suspendUpdateCount" Hidden="true" />
+    </Members>
     <Compartments>
       <Compartment Name="Fields" Collapsed="true" />
       <Compartment Name="Events" Collapsed="true" />
@@ -49,12 +87,42 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Interface Name="ControlTreeView.INodeContainer">
-    <Position X="5.25" Y="0.5" Width="1.5" />
+  <Class Name="ControlTreeView.CTreeViewEventArgs">
+    <Position X="5.75" Y="7.75" Width="1.75" />
+    <Members>
+      <Method Name="CTreeViewEventArgs" Hidden="true" />
+    </Members>
     <TypeIdentifier>
-      <HashCode>UAAgCAAAAABCAAAAAAAAAAQAAAAACQAAAAAAAAAAAAA=</HashCode>
-      <FileName>INodeContainer.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>CTreeViewEventArgs.cs</FileName>
     </TypeIdentifier>
-  </Interface>
+  </Class>
+  <Class Name="ControlTreeView.DragNodesEventArgs">
+    <Position X="5.75" Y="9.25" Width="1.75" />
+    <Members>
+      <Method Name="DragNodesEventArgs" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DragNodeEventArgs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="ControlTreeView.CTreeViewPlusMinus">
+    <Position X="5.5" Y="6" Width="2" />
+    <Members>
+      <Field Name="_Minus" Hidden="true" />
+      <Field Name="_Plus" Hidden="true" />
+      <Field Name="_Size" Hidden="true" />
+      <Method Name="CTreeViewPlusMinus" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAAggAAAAAAAAAIBAAAAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>Other Declarations.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

@@ -16,8 +16,6 @@ namespace ControlTreeView
         {
             get
             {
-                //if (!IsShown) return new Point(-1, -1);//do not work
-                //else return _ControlLocation;
                 return _location;
             }
             set{_location = value;}
@@ -104,8 +102,6 @@ namespace ControlTreeView
         /// <returns></returns>
         internal int NextYMax(int currentX, int currentYMax)
         {
-            //if (IsShown || !CTreeView.RelocateCollapsing)
-            //{
             int nextYMax = currentYMax;
             if (Nodes.Count > 0 && (IsExpanded || !OwnerCTreeView.MinimizeCollapsed))
             {
@@ -126,7 +122,6 @@ namespace ControlTreeView
                 Location = new Point(currentX, nextYMax);
                 nextYMax += Bounds.Height + OwnerCTreeView.IndentWidth;
             }
-            //}
             return nextYMax;
         }
 
@@ -138,8 +133,6 @@ namespace ControlTreeView
         /// <returns></returns>
         internal int NextXMax(int currentXMax, int currentY)
         {
-            //if (IsShown)
-            //{
             if (Nodes.Count > 0 && (IsExpanded || !OwnerCTreeView.MinimizeCollapsed))
             {
                 foreach (CTreeNode child in Nodes)
@@ -155,14 +148,13 @@ namespace ControlTreeView
                 Location = new Point(currentXMax, currentY);
                 currentXMax += Bounds.Width + OwnerCTreeView.IndentWidth;
             }
-            //}
             return currentXMax;
         }
 
         /// <summary>
         /// Calculates coordinats for PlusMinus button of this node and all child nodes.
         /// </summary>
-        /// <param name="locationPlusMinusCalc"></param>
+        /// <param name="plusMinusCalc"></param>
         /// <param name="needRootPlusMinus"></param>
         internal void CalculatePlusMinus(Func<CTreeNode, Point> plusMinusCalc, bool needRootPlusMinus)
         {

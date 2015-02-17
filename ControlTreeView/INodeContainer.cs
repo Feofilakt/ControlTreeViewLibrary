@@ -29,7 +29,7 @@ namespace ControlTreeView
         CTreeNode LastNode { get; }
 
         /// <summary>
-        /// Gets the tree view that the CTreeNodeCollection of this INodeContainer is assigned to.
+        /// Gets the TreeView that the CTreeNodeCollection of this INodeContainer is assigned to.
         /// </summary>
         CTreeView OwnerCTreeView { get; }
 

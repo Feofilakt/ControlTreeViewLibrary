@@ -6,7 +6,10 @@ using System.Collections.Generic;
 
 namespace ControlTreeView
 {
-    public partial class CTreeNode : INodeContainer//, ICloneable
+    /// <summary>
+    /// Represents a node of a CTreeView.
+    /// </summary>
+    public partial class CTreeNode : INodeContainer
     {
         #region Constructors
         /// <summary>
@@ -18,7 +21,7 @@ namespace ControlTreeView
         /// <summary>
         /// Initializes a new instance of the CTreeNode class with the specified CTreeNodeControl.
         /// </summary>
-        /// <param name="control">Сontrol, which will be assigned to this node.</param>
+        /// <param name="control">Сontrol that will be assigned to this node.</param>
         public CTreeNode(Control control)
             : this("", control) { }
 
@@ -55,57 +58,7 @@ namespace ControlTreeView
                     OwnerCTreeView.Controls.Add(value);
                 }
                 _Control = value;
-                if (value is INodeControl)
-                {
-                    ((INodeControl)_Control).OwnerNode = this;
-                    //((INodeControl)_Control).UserSelect += new EventHandler((sender, e) =>
-                    //{
-                    //    if (ParentCTreeView.SelectionMode != CTreeViewSelectionMode.None)
-                    //    {
-                    //        if (!IsSelected)
-                    //        {
-                    //            ParentCTreeView.ClearSelection();
-                    //            IsSelected = true;
-                    //        }
-                    //        else
-                    //        {
-                    //            List<CTreeNode> nodesToUnselect = new List<CTreeNode>(ParentCTreeView.SelectedNodes);
-                    //            nodesToUnselect.Remove(this);
-                    //            foreach (CTreeNode node in nodesToUnselect) node.IsSelected = false;
-                    //        }
-                    //    }
-                    //});//unsubscribe!!!
-                    //((INodeControl)_Control).UserMultiSelect += new EventHandler((sender, e) =>
-                    //{
-                    //    if ((ParentCTreeView.SelectionMode == CTreeViewSelectionMode.Multi) ||
-                    //        (ParentCTreeView.SelectionMode == CTreeViewSelectionMode.MultiSameParent &&
-                    //        (ParentCTreeView.SelectedNodes.Count == 0 || ParentCTreeView.SelectedNodes[0].Parent == Parent)))
-                    //    {
-
-                    //        IsSelected = !IsSelected;
-                    //    }
-                    //});//unsubscribe!!!
-                    //((INodeControl)_Control).UserDrag += new EventHandler((sender, e) =>
-                    //{
-                    //    if (ParentCTreeView.DragAndDropMode != CTreeViewDragAndDropMode.Nothing && IsSelected)
-                    //    {
-                    //        //Checking that all selected nodes has same parent
-                    //        bool checkSameParent = true;
-                    //        foreach (CTreeNode selectedNode in ParentCTreeView.SelectedNodes)
-                    //        {
-                    //            if (selectedNode.Parent != ParentCTreeView.SelectedNodes[0].Parent) checkSameParent = false;
-                    //            //сделать проверку и того, что выделен узел и все его потомки в поддереве?
-                    //        }
-                    //        //Prepare and sort the dragged nodes
-                    //        if (checkSameParent)
-                    //        {
-                    //            List<CTreeNode> draggedNodes = new List<CTreeNode>(ParentCTreeView.SelectedNodes);
-                    //            draggedNodes.Sort(new System.Comparison<CTreeNode>(new Func<CTreeNode, CTreeNode, int>((node1, node2) => node1.Index - node2.Index)));
-                    //            ParentCTreeView.DoDragDrop(draggedNodes, DragDropEffects.Move);
-                    //        }
-                    //    }
-                    //});//unsubscribe!!!
-                }
+                if (value is INodeControl)((INodeControl)_Control).OwnerNode = this;
                 if (notNull) OwnerCTreeView.Recalculate();
             }
         }
@@ -236,7 +189,7 @@ namespace ControlTreeView
 
         private int _Level;
         /// <summary>
-        /// Gets the zero-based depth of the tree node in the CTreeView control.
+        /// Gets the zero-based depth of the tree node in the CTreeView.
         /// </summary>
         //[BrowsableAttribute(false)]
         public int Level
@@ -445,19 +398,6 @@ namespace ControlTreeView
             }
             else return Nodes.Count;
         }
-
-        ///// <summary>
-        ///// Copies the tree node and the entire subtree rooted at this tree node.
-        ///// </summary>
-        ///// <returns>The Object that represents the cloned TreeNode.</returns>
-        //public virtual Object Clone()
-        //{
-        //    object newControl = (object)Activator.CreateInstance(this.Control.GetType());
-        //    CTreeNode newNode = new CTreeNode(Name,(Control)newControl);
-        //    newNode.Tag = Tag;
-        //    foreach (CTreeNode child in Nodes) newNode.Nodes.Add((CTreeNode)child.Clone());
-        //    return newNode;
-        //}
 
         /// <summary>
         /// Apply action to this node and recursively to each child node.

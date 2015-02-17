@@ -6,7 +6,6 @@ using System.ComponentModel;
 
 namespace ControlTreeView
 {
-    [Designer(typeof(CTreeViewDesigner))]
     public partial class CTreeView
     {
         private int suspendUpdateCount;
@@ -38,7 +37,7 @@ namespace ControlTreeView
                 const int endLineIndent = 2;
                 bool showRootPlusMinus = true;
 
-                //Calculate Visible (may be optimized)
+                //Calculate Visible
                 foreach (CTreeNode rootNode in Nodes)
                 {
                     rootNode.Nodes.TraverseNodes(node => { node.Visible = false; });
@@ -132,13 +131,10 @@ namespace ControlTreeView
                 this.Nodes.TraverseNodes(node =>
                 {
                     node.Control.Visible = node.Visible;
-                    //if (node.Control.Visible == true)
-                    //{
                     Point controlLocation = node.Location;
                     controlLocation.Offset(AutoScrollPosition);
-                    if (node.Control is NodeControl) controlLocation.Offset(-((NodeControl)node.Control).Area.X,-((NodeControl)node.Control).Area.Y);
+                    if (node.Control is NodeControl) controlLocation.Offset(-((NodeControl)node.Control).Area.X, -((NodeControl)node.Control).Area.Y);
                     node.Control.Location = controlLocation;
-                    //}
                 });
                 this.ResumeLayout(false);
 

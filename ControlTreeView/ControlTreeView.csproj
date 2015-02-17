@@ -61,14 +61,11 @@
     <Compile Include="CTreeView\CTreeView.Public.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="DragAndDropView.cs" />
     <Compile Include="CTreeNodeCollection\CTreeNodeCollection.cs" />
     <Compile Include="CTreeView\CTreeView.Internal.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="CTreeNode\CTreeNode.Internal.cs" />
-    <Compile Include="CTreeViewDesigner.cs">
-    </Compile>
     <Compile Include="DragNodeEventArgs.cs" />
     <Compile Include="CTreeViewEventArgs.cs" />
     <Compile Include="INodeContainer.cs" />

@@ -6,6 +6,9 @@ using System.Text;
 
 namespace ControlTreeView
 {
+    /// <summary>
+    /// Represents a collection of CTreeNode objects.
+    /// </summary>
     public partial class CTreeNodeCollection : Collection<CTreeNode>
     {
         /// <summary>
@@ -32,19 +35,22 @@ namespace ControlTreeView
         /// </summary>
         /// <param name="nodes">An array of CTreeNode objects representing the tree nodes to add to the collection.</param>
         /// <exception cref="ArgumentNullException">Nodes is null.</exception>
-        /// <exception cref="">The nodes is currently assigned to another CTreeNode.</exception>
-        /// <exception cref="">The nodes is currently assigned to another CTreeView.</exception>
         public virtual void AddRange(CTreeNode[] nodes)
         {
-            if (nodes == null) throw new ArgumentNullException("Nodes is null.");//?
+            if (nodes == null) throw new ArgumentNullException("Nodes is null.");
             BeginUpdateCTreeView();
             foreach (CTreeNode node in nodes) Add(node);
             EndUpdateCTreeView();
         }
 
+        /// <summary>
+        /// Inserts an array of previously created tree nodes to the collection at the specific position.
+        /// </summary>
+        /// <param name="index">The zero-based index at which nodes should be inserted.</param>
+        /// <param name="nodes">An array of CTreeNode objects representing the tree nodes to add to the collection.</param>
         public virtual void InsertRange(int index, CTreeNode[] nodes)
         {
-            if (nodes == null) throw new ArgumentNullException("Nodes is null.");//?
+            if (nodes == null) throw new ArgumentNullException("Nodes is null.");
             BeginUpdateCTreeView();
             foreach (CTreeNode node in nodes) Insert(index++, node);
             EndUpdateCTreeView();
@@ -52,7 +58,7 @@ namespace ControlTreeView
 
         //public virtual void RemoveRange(CTreeNode[] nodes)
         //{
-        //    if (nodes == null) throw new ArgumentNullException("Nodes is null.");//?
+        //    if (nodes == null) throw new ArgumentNullException("Nodes is null.");
         //    BeginUpdateCTreeView();
         //    foreach (CTreeNode node in nodes) Remove(node);
         //    EndUpdateCTreeView();
@@ -104,7 +110,8 @@ namespace ControlTreeView
         {
             foreach (CTreeNode node in Find(key, false)) Remove(node);
             // or
-            //Remove(this[key]);//???
+            // Remove(this[key]);
+            // ?
         }
 
         /// <summary>

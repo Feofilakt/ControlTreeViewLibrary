@@ -9,7 +9,6 @@ using System.Reflection;
 
 namespace ControlTreeView
 {
-    [Designer(typeof(CTreeViewDesigner))]
     public partial class CTreeView : Panel, INodeContainer
     {
         #region Constructors
@@ -26,10 +25,8 @@ namespace ControlTreeView
             PathSeparator=@"\";
             //AutoScroll = true;
             //AllowDrop = true;
-            //DrawStyle = CTreeViewDrawStyle.Tree;
             ShowPlusMinus = true;
             ShowLines = true;
-            //ShowControls = CTreeViewShowControls.Automatically;
             ShowRootLines = true;
             _selectedNodes = new List<CTreeNode>();
             MinimizeCollapsed = true;
@@ -46,7 +43,6 @@ namespace ControlTreeView
             Bitmap imageMinus = new Bitmap(Assembly.GetExecutingAssembly().GetManifestResourceStream("ControlTreeView.Resources.minus.bmp"));
             PlusMinus = new CTreeViewPlusMinus(imagePlus, imageMinus);
 
-            //DragTargetPosition = new DragTargetPositionClass();
             scrollTimer = new Timer();
             scrollTimer.Tick += new EventHandler(scrollTimer_Tick);
             scrollTimer.Interval = 1;
@@ -173,9 +169,9 @@ namespace ControlTreeView
 
         private bool _ShowLines;
         /// <summary>
-        /// Gets or sets a value indicating whether lines are drawn between tree nodes in the tree view control.
+        /// Gets or sets a value indicating whether lines are drawn between tree nodes.
         /// </summary>
-        /// <value>true  if lines are drawn between tree nodes in the tree view control; otherwise, false. The default is true.</value>
+        /// <value>true  if lines are drawn between tree nodes; otherwise, false. The default is true.</value>
         [DefaultValue(true)]
         public bool ShowLines
         {
@@ -192,9 +188,9 @@ namespace ControlTreeView
 
         private bool _ShowRootLines;
         /// <summary>
-        /// Gets or sets a value indicating whether lines are drawn between the tree nodes that are at the root of the tree view.
+        /// Gets or sets a value indicating whether lines are drawn for the root nodes of the CTreeView.
         /// </summary>
-        /// <value>true  if lines are drawn between the tree nodes that are at the root of the tree view; otherwise, false. The default is true.</value>
+        /// <value>true  if lines are drawn for the root nodes of the CTreeView; otherwise, false. The default is true.</value>
         [DefaultValue(true)]
         public bool ShowRootLines
         {
@@ -265,7 +261,7 @@ namespace ControlTreeView
         /// Gets or sets the distance to indent each child tree node level.
         /// </summary>
         [DefaultValue(30)]
-        public int IndentDepth //To rename!
+        public int IndentDepth
         {
             get { return _indentDepth; }
             set
@@ -283,7 +279,7 @@ namespace ControlTreeView
         /// Gets or sets the minimal distance between child tree nodes.
         /// </summary>
         [DefaultValue(10)]
-        public int IndentWidth //To rename!
+        public int IndentWidth
         {
             get { return _indentWidth; }
             set
@@ -349,10 +345,10 @@ namespace ControlTreeView
         }
 
         /// <summary>
-        /// Retrieves the number of tree nodes, optionally including those in all subtrees, assigned to the tree view control.
+        /// Retrieves the number of tree nodes, optionally including those in all subtrees, assigned to the CTreeView control.
         /// </summary>
-        /// <param name="includeSubTrees">true  to count the TreeNode items that the subtrees contain; otherwise, false.</param>
-        /// <returns>The number of tree nodes, optionally including those in all subtrees, assigned to the tree view control.</returns>
+        /// <param name="includeSubTrees">true  to count the CTreeNode items that the subtrees contain; otherwise, false.</param>
+        /// <returns>The number of tree nodes, optionally including those in all subtrees, assigned to the CTreeView control.</returns>
         public int GetNodeCount(bool includeSubTrees)
         {
             int result = Nodes.Count;
@@ -388,7 +384,7 @@ namespace ControlTreeView
         /// </summary>
         /// <param name="x">The X position to evaluate and retrieve the node from.</param>
         /// <param name="y">The Y position to evaluate and retrieve the node from.</param>
-        /// <returns>The CTreeNode at the specified location, in tree view (client) coordinates, or null if there is no node at that location.</returns>
+        /// <returns>The CTreeNode at the specified location, in CTreeView (client) coordinates, or null if there is no node at that location.</returns>
         public CTreeNode GetNodeAt(int x, int y)
         {
             return GetNodeAt(new Point(x,y));
@@ -443,11 +439,6 @@ namespace ControlTreeView
         /// Occurs when the tree node is selected.
         /// </summary>
         public event EventHandler<CTreeViewEventArgs> SelectNode;
-
-        ///// <summary>
-        ///// Occurs when the user begins dragging a one or more nodes.
-        ///// </summary>
-        //public event EventHandler<DragNodesEventArgs> DragNodes;
         #endregion
     }
 }
