@@ -109,18 +109,18 @@ namespace ControlTreeView
                 {
                     nextYMax = child.NextYMax(currentX + Bounds.Width + OwnerCTreeView.IndentDepth, nextYMax);
                 }
-                int minY = FirstNode.Location.Y + FirstNode.Bounds.Height / 2;
-                int maxY = LastNode.Location.Y + LastNode.Bounds.Height / 2;
+                int minY = FirstNode.Location.Y + FirstNode.Size.Height / 2;
+                int maxY = LastNode.Location.Y + LastNode.Size.Height / 2;
                 if (nextYMax - currentYMax - OwnerCTreeView.IndentWidth < Bounds.Height)
                 {
                     //
                 }
-                Location = new Point(currentX, (minY + maxY) / 2 - Bounds.Height / 2);
+                Location = new Point(currentX, (minY + maxY) / 2 - Size.Height / 2);
             }
             else
             {
                 Location = new Point(currentX, nextYMax);
-                nextYMax += Bounds.Height + OwnerCTreeView.IndentWidth;
+                nextYMax += Size.Height + OwnerCTreeView.IndentWidth;
             }
             return nextYMax;
         }
@@ -139,14 +139,14 @@ namespace ControlTreeView
                 {
                     currentXMax = child.NextXMax(currentXMax, currentY + Bounds.Height + OwnerCTreeView.IndentDepth);
                 }
-                int minX = FirstNode.Location.X + FirstNode.Bounds.Width / 2;
-                int maxX = LastNode.Location.X + LastNode.Bounds.Width / 2;
-                Location = new Point((minX + maxX) / 2 - Bounds.Width / 2, currentY);
+                int minX = FirstNode.Location.X + FirstNode.Size.Width / 2;
+                int maxX = LastNode.Location.X + LastNode.Size.Width / 2;
+                Location = new Point((minX + maxX) / 2 - Size.Width / 2, currentY);
             }
             else
             {
                 Location = new Point(currentXMax, currentY);
-                currentXMax += Bounds.Width + OwnerCTreeView.IndentWidth;
+                currentXMax += Size.Width + OwnerCTreeView.IndentWidth;
             }
             return currentXMax;
         }
